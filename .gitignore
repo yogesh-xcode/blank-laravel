@@ -1,0 +1,13 @@
+# Sensitive Creds
+.env
+
+# Build files
+/vendor/
+/storage/framework/views/
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/logs/*.log
+bootstrap/cache/*.php
+
+# Docker
+docker/data/
