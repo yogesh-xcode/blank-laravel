@@ -9,6 +9,3 @@
 /storage/framework/maintenance.php
 /storage/logs/*.log
 bootstrap/cache/*.php
-
-# Docker
-docker/data/
