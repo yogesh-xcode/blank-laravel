@@ -52,8 +52,6 @@ services:
       POSTGRES_DB: ${DB_DATABASE:-blank}
       POSTGRES_USER: ${DB_USERNAME:-blank}
       POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
-    ports:
-      - "127.0.0.1:5432:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
     networks:

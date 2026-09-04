@@ -4,6 +4,9 @@
 
 # Build files
 /vendor/
+/node_modules/
+/public/build/
+/public/hot
 /config/*.php
 /storage/framework/views/*
 /storage/framework/cache/*
