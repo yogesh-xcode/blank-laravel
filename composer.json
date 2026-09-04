@@ -8,8 +8,24 @@
   },
   "require-dev": {
     "barryvdh/laravel-ide-helper": "^3.7"
-  }
+  },
   "license": "PolyForm-Noncommercial-1.0.0",
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "preferred-install": "dist"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
+    }
+  },
   "autoload": {
     "psr-4": {
       "App\\": "app/"

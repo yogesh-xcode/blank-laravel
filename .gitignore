@@ -1,13 +1,19 @@
 # Sensitive Creds
 .env
+.env.backup
 
 # Build files
 /vendor/
-/storage/framework/views/
+/config/*.php
+/storage/framework/views/*
 /storage/framework/cache/*
 /storage/framework/sessions/*
+/storage/framework/maintenance.php
 /storage/logs/*.log
 bootstrap/cache/*.php
 
-# Docker
-docker/data/
+# IDE & Tools
+.idea/
+.vscode/
+.phpunit.cache/
+.phpunit.result.cache
