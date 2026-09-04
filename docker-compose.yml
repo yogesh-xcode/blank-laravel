@@ -9,7 +9,7 @@ services:
     volumes:
       - .:/var/www
     depends_on:
-      - mysql
+      - postgres
     networks:
       - blank-net
 
@@ -27,19 +27,18 @@ services:
     networks:
       - blank-net
 
-  mysql:
-    image: mysql:8.0
-    container_name: blank-mysql
+  postgres:
+    image: postgres:16
+    container_name: blank-postgres
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: blank
-      MYSQL_USER: blank
-      MYSQL_PASSWORD: blank
-      MYSQL_ROOT_PASSWORD: root
+      POSTGRES_DB: blank
+      POSTGRES_USER: blank
+      POSTGRES_PASSWORD: blank
     ports:
-      - "3306:3306"
+      - "5432:5432"
     volumes:
-      - mysql_data:/var/lib/mysql
+      - pg_data:/var/lib/postgresql/data
     networks:
       - blank-net
 
@@ -48,4 +47,4 @@ networks:
     driver: bridge
 
 volumes:
-  mysql_data:
+  pg_data:
