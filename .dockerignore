@@ -4,3 +4,4 @@ vendor
 node_modules
 storage/logs/*
 docker/data/
+public/build/
