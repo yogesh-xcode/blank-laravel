@@ -16,6 +16,16 @@ if grep -q "^APP_KEY=$" .env 2>/dev/null; then
     php artisan key:generate --force
 fi
 
+if [ ! -d "node_modules" ]; then
+    echo "Installing Node dependencies..."
+    pnpm install --frozen-lockfile
+fi
+
+if [ ! -d "public/build" ]; then
+    echo "Building frontend assets..."
+    pnpm build
+fi
+
 mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs
 chmod -R 775 storage bootstrap/cache 2>/dev/null || true
 

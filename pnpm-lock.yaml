@@ -11,22 +11,16 @@ importers:
       '@inertiajs/react':
         specifier: ^3.7.0
         version: 3.7.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@inertiajs/vite':
-        specifier: ^3.7.0
-        version: 3.7.0(vite@8.2.2(esbuild@0.28.2))
-      laravel-vite-plugin:
-        specifier: ^1.3.0
-        version: 1.3.0(vite@8.2.2(esbuild@0.28.2))
       react:
         specifier: ^19.2.8
         version: 19.2.8
       react-dom:
         specifier: ^19.2.8
         version: 19.2.8(react@19.2.8)
-      vite:
-        specifier: ^8.0.0
-        version: 8.2.2(esbuild@0.28.2)
     devDependencies:
+      '@inertiajs/vite':
+        specifier: ^3.7.0
+        version: 3.7.0(vite@8.2.2(esbuild@0.28.2))
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
@@ -36,9 +30,15 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.1.1
         version: 6.1.1(vite@8.2.2(esbuild@0.28.2))
+      laravel-vite-plugin:
+        specifier: ^1.3.0
+        version: 1.3.0(vite@8.2.2(esbuild@0.28.2))
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
+      vite:
+        specifier: ^8.0.0
+        version: 8.2.2(esbuild@0.28.2)
 
 packages:
 
