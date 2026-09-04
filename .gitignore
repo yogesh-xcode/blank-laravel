@@ -6,6 +6,7 @@
 /storage/framework/views/
 /storage/framework/cache/*
 /storage/framework/sessions/*
+/storage/framework/maintenance.php
 /storage/logs/*.log
 bootstrap/cache/*.php
 

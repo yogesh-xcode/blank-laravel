@@ -6,7 +6,9 @@ Laravel 13 API starter kit
 
 Click **"Use this template"** on GitHub to create a new repo from this starter.
 
-## Setup
+## Setup (Local)
+
+Requires PHP 8.3+ and PostgreSQL.
 
     git clone <your-new-repo>
     cd <your-new-repo>
@@ -15,7 +17,7 @@ Click **"Use this template"** on GitHub to create a new repo from this starter.
     php artisan key:generate
     php artisan migrate
 
-## Run
+## Run (Local)
 
     php artisan serve
 
@@ -23,6 +25,5 @@ Click **"Use this template"** on GitHub to create a new repo from this starter.
 
     docker compose up -d --build
     docker compose exec app bash
-    composer install
     php artisan key:generate
     php artisan migrate
