@@ -1,6 +1,6 @@
 {
   "name": "yo/blank-laravel",
-  "description": "Blank Laravel 13 API starter kit",
+  "description": "Blank Laravel 13 starter kit with Inertia.js, React 19, and TypeScript",
   "type": "project",
   "require": {
     "php": "^8.3",
