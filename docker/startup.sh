@@ -19,4 +19,7 @@ fi
 mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs
 chmod -R 775 storage bootstrap/cache 2>/dev/null || true
 
+# Migrations are intentionally not run here.
+# Run them manually: docker compose exec app php artisan migrate
+
 exec php-fpm

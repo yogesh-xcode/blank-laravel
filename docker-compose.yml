@@ -49,9 +49,9 @@ services:
     container_name: blank-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: blank
-      POSTGRES_USER: blank
-      POSTGRES_PASSWORD: blank
+      POSTGRES_DB: ${DB_DATABASE:-blank}
+      POSTGRES_USER: ${DB_USERNAME:-blank}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
     ports:
       - "127.0.0.1:5432:5432"
     volumes:
@@ -59,7 +59,7 @@ services:
     networks:
       - blank-net
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U blank -d blank"]
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
       interval: 5s
       timeout: 5s
       retries: 5

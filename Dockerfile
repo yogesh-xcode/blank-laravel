@@ -5,9 +5,10 @@ ARG UID=1000
 RUN apt-get update && apt-get install -y \
         libzip-dev \
         libpq-dev \
+        libicu-dev \
         libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) zip gd pdo_pgsql \
+    && docker-php-ext-install -j$(nproc) zip gd pdo_pgsql intl \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
