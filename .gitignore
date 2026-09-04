@@ -4,6 +4,7 @@
 
 # Build files
 /vendor/
+/config/*.php
 /storage/framework/views/*
 /storage/framework/cache/*
 /storage/framework/sessions/*
