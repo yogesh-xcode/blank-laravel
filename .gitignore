@@ -1,5 +1,6 @@
 # Sensitive Creds
 .env
+.env.backup
 
 # Build files
 /vendor/
@@ -9,3 +10,9 @@
 /storage/framework/maintenance.php
 /storage/logs/*.log
 bootstrap/cache/*.php
+
+# IDE & Tools
+.idea/
+.vscode/
+.phpunit.cache/
+.phpunit.result.cache

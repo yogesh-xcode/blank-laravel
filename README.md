@@ -24,6 +24,8 @@ Requires PHP 8.3+ and PostgreSQL.
 ## Docker
 
     docker compose up -d --build
-    docker compose exec app bash
-    php artisan key:generate
-    php artisan migrate
+    docker compose exec app php artisan migrate
+
+The API is available at `http://localhost:8000/api`.
+
+    curl http://localhost:8000/api
